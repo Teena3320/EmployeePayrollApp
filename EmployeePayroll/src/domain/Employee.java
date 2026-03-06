@@ -1,22 +1,26 @@
 package domain;
 
 public class Employee {
-    private String empId;
-    private String name;
-    private String email;
-    private String phone;
+    private final String empId;
+    private final String name;
+    private final String email;
+    private final String phone;
 
-    private UserAccount account;
-
-    public Employee(String empId, String name, String email, String phone, UserAccount account) {
+    public Employee(String empId, String name, String email, String phone) {
         this.empId = empId;
         this.name = name;
         this.email = email;
         this.phone = phone;
-        this.account = account;
+    }
+
+    public Employee(String empId, String name, String email, String phone, Object ignored) {
+        this(empId, name, email, phone);
     }
 
     public String getEmpId() { return empId; }
+    public String getName()  { return name; }
+    public String getEmail() { return email; }
+    public String getPhone() { return phone; }
 
     @Override
     public String toString() {
@@ -26,7 +30,6 @@ public class Employee {
                 .append("  name : ").append(name).append('\n')
                 .append("  email: ").append(email).append('\n')
                 .append("  phone: ").append(phone).append('\n')
-                .append("  ").append(account).append('\n')
                 .append('}')
                 .toString();
     }
