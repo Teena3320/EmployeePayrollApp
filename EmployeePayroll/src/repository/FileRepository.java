@@ -10,7 +10,6 @@ import java.nio.file.StandardOpenOption;
 public class FileRepository {
 
     public void save(Employee employee) throws IOException {
-        // Fixed filename to match screenshot
         String fileName = "employee_data.txt";
         Path file = Path.of(fileName);
 
