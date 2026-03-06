@@ -1,4 +1,19 @@
 package app;
+/*
+ * ------------------ Main Class ------------------------
+ *
+ * Entry point of Use Case 1.
+ *
+ * Execution Flow:
+ * 1. Take input from user
+ * 2. Validate input
+ * 3. Create objects
+ * 4. Persist data
+ * 5. Display confirmation
+ *
+ * @author Developer
+ * @version 1.0
+ */
 
 import exceptions.ValidationException;
 import domain.Employee;
